@@ -6,8 +6,8 @@ from sqlalchemy import create_engine
 def load_data(messages_filepath, categories_filepath):
 
     cwd = os.getcwd() # Get Current Working Directory.
-    messages = pd.read_csv(os.path.join(cwd + '\\data\\messages.csv')) # Load Messages Dataset.
-    categories = pd.read_csv(os.path.join(cwd + '\\data\\categories.csv')) # Load Categories Dataset.
+    messages = pd.read_csv(os.path.join(cwd + '\\data\\disaster_messages.csv')) # Load Messages Dataset.
+    categories = pd.read_csv(os.path.join(cwd + '\\data\\disaster_categories.csv')) # Load Categories Dataset.
 
     return messages, categories
 
