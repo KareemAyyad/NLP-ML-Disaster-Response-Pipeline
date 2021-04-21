@@ -9,6 +9,9 @@
       <a href="#about-the-project">About The Project</a>
     </li>
     <li>
+      <a href="#getting-started">Getting Started</a>
+    </li>
+    <li>
       <a href="#etl-pipeline">ETL Pipeline</a>
     </li>
     <li>
