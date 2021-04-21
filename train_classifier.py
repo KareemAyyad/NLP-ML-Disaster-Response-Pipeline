@@ -48,9 +48,7 @@ def load_data(path_db='Database.db', table='Table'):
     df = pd.read_sql_table('Table', engine)
     df.drop(columns='original', inplace=True)
     
-    # There are columns with missing values. We have to drop these
-    # to maintain quality of data.
-    # And also to be able to pass the data to the classifier as it doesn't seem to accept NaN in target labels
+    #There are columns with missing values. We have to drop these:
     df = df.dropna(axis=0, how='any')
     df.isna().sum().sum()
     print("Number of Null values in Dataset after dropping: ", df.isna().sum().sum()) 
@@ -63,7 +61,8 @@ def load_data(path_db='Database.db', table='Table'):
 
 
 
-
+# To maintain quality of data.
+# And also to be able to pass the data to the classifier as it doesn't seem to accept NaN in target labels
 
 def tokenize(text):
     """
@@ -73,7 +72,7 @@ def tokenize(text):
             Text: The text to tokenize.
         
         Returns: 
-            List: List of Strings, each of which is a tokenized version of text.
+            String: Tokenized version of text.
     """
     tokens = word_tokenize(text)
     lemmatizer = WordNetLemmatizer()

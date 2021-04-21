@@ -37,11 +37,17 @@ model = pickle.load(open('model.pkl', 'rb'))
 def index():
     
     ## Extract data for your own visuals
+    ## Creating variables for Graph 1 below.
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
+
+    #Creating variables for Graph 2 below.
+    category_names = df.iloc[:,4:].columns
+    category_counts = (df.iloc[:,4:] != 0).sum().values
     
     ## Create visuals
     graphs = [
+        # Graph 1
         {
             'data': [
                 Bar(
@@ -57,6 +63,25 @@ def index():
                 },
                 'xaxis': {
                     'title': "Genre"
+                }
+            }
+        },
+        # Graph 2
+        {
+            'data': [
+                Bar(
+                    x=category_names,
+                    y=category_counts,
+                )
+            ],
+
+            'layout': {
+                'title': 'Distribution of Message Categories',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Categories"
                 }
             }
         }

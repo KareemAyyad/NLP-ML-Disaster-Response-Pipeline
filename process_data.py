@@ -53,7 +53,7 @@ def main():
         df = clean_data(messages, categories)
         
         print('Saving data...\n    DATABASE: {}'.format(database_filepath))
-        save_data(df, 'Database.db')
+        save_data(df, database_filepath)
         
         print('Cleaned data saved to database.')
     
