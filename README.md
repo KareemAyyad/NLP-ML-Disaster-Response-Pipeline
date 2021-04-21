@@ -62,7 +62,7 @@ git clone https://github.com/KareemAyyad/NLP-ML-Disaster-Response-Pipelines
     -  Run this script second to train the model after cleaning:
 `python train_classifier.py Database.db classifier.pkl`
 
-2.  Execute the following command in the root directory to run the web app.  `python run.py`
+2.  Run the following command in the root directory to launch the web app.  `python run.py`
     
 3.  Go to  [http://localhost:3001/](http://localhost:3001/)
 ## ETL Pipeline
