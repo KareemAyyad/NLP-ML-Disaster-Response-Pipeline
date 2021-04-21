@@ -108,7 +108,7 @@ git clone https://github.com/KareemAyyad/NLP-ML-Disaster-Response-Pipelines
 <!-- Acknowledgements -->
 ## Acknowledgements
 Thanks to FigureEight for providing this dataset.
-Project was built by me, and the work was reviewed by awesome Udacity instructors.
+Work was reviewed by Udacity instructors.
 
 
 <!-- CONTACT -->
