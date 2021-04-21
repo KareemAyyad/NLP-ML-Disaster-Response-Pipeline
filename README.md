@@ -1,3 +1,4 @@
+
 # NLP-ML Disaster Response Pipeline
 [![LinkedIn][linkedin-shield]][linkedin-url]
 <!-- TABLE OF CONTENTS -->
@@ -31,7 +32,36 @@ Each of these is described below in more detail.
 
 This model takes in text data, and classifies it into 1 or more of 36 categories of disaster. In practice, this would allow departments to sift through messages and respond more swiftly.
 
+![Intro](screenshots/main_page.png)
 
+## Getting Started
+### Dependencies
+-   Python 3.5+ (used Python 3.7)
+-   Machine Learning Libraries: NumPy, SciPy, Pandas, Sciki-Learn
+-   Natural Language Process Libraries: NLTK
+-   SQLite Database Libraries: SQL Alchemy
+-   Web App and Data Visualization: Flask, Plotly
+
+### Installing
+
+Clone this Github repository:
+
+```
+git clone https://github.com/KareemAyyad/NLP-ML-Disaster-Response-Pipelines
+```
+### Running Web App:
+
+1.  Run the following commands in the project's root directory to set up your database and model.
+    
+    -   ETL pipeline by typing the following in your terminal:
+`python process_data.py disaster_messages.csv disaster_categories.csv Database.db`
+
+    -  Run this script second to train the model after cleaning:
+`python train_classifier.py Database.db classifier.pkl`
+
+2.  Execute the following command in the root directory to run the web app.  `python run.py`
+    
+3.  Go to  [http://localhost:3001/](http://localhost:3001/)
 ## ETL Pipeline
 
 #### In a Python script,  `process_data.py`, data cleaning pipeline does the following:
@@ -42,8 +72,10 @@ This model takes in text data, and classifies it into 1 or more of 36 categories
 -   Cleans the data
 -   Stores it in a SQLite database
 
-#### 1) Run this first by typing the following in your terminal:
-`python process_data.py disaster_messages.csv disaster_categories.csv DisasterResponse.db`
+![ETL](screenshots/etl.png)
+
+#### 
+
 
 ## ML Pipeline:
 
@@ -55,8 +87,10 @@ This model takes in text data, and classifies it into 1 or more of 36 categories
 -   Outputs results on the test set
 -   Exports the final model as a pickle file
 
-#### 2) Run this script second to train the model after cleaning:
-`python train_classifier.py DisasterResponse.db classifier.pkl`
+
+
+
+![Metrics](screenshots/metrics.png)
 
 
 ## Flask Web App
@@ -64,8 +98,8 @@ This model takes in text data, and classifies it into 1 or more of 36 categories
  - Packaged into Flask web app.
  - Data is visualized using Plotly in the web app.
 
-#### 3) Launch:
-`python run.py`
+
+![Sample Output](screenshots/sample_output.png)
 
 
 <!-- Acknowledgements -->

@@ -25,7 +25,7 @@ def tokenize(text):
     return clean_tokens
 
 # Load data
-engine = create_engine('sqlite:///Database.db')
+engine = create_engine('sqlite:///DisasterResponse.db')
 df = pd.read_sql_table('Table', engine)
 
 # Load model
@@ -81,7 +81,8 @@ def index():
                     'title': "Count"
                 },
                 'xaxis': {
-                    'title': "Categories"
+                    'title': "Categories",
+                    'tickangle': 35
                 }
             }
         }
