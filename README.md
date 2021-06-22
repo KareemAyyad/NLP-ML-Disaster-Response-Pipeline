@@ -40,7 +40,7 @@ This model takes in text data, and classifies it into 1 or more of 36 categories
 ## Getting Started
 ### Dependencies
 -   Python 3.5+ (used Python 3.7)
--   Machine Learning Libraries: NumPy, SciPy, Pandas, Sciki-Learn
+-   Machine Learning Libraries: NumPy, SciPy, Pandas, Scikit-Learn
 -   Natural Language Process Libraries: NLTK
 -   SQLite Database Libraries: SQL Alchemy
 -   Web App and Data Visualization: Flask, Plotly
